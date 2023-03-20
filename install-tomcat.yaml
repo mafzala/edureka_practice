@@ -27,6 +27,7 @@
        path: /opt/tomcat8
        state: directory
        mode: 0755
+       recurse: yes
        owner: tomcat
        group: tomcat
 
