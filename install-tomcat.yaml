@@ -1,6 +1,6 @@
 ---
 - name: Download Tomcat8 from tomcat.apache.org
-  hosts: localhost
+  hosts: kmaster,kslave1
   vars:
     download_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.87.tar.gz
   tasks:
@@ -26,7 +26,7 @@
      file:
        path: /opt/tomcat8
        state: directory
-       mode: 0755
+       mode: u=rwX,g=rX,o=rX
        recurse: yes
        owner: tomcat
        group: tomcat
