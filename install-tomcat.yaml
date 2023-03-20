@@ -36,7 +36,7 @@
      unarchive:
        src: "{{download_url}}"
        dest: /opt/tomcat8
-       mode: 0755
+       mode: u=rwX,g=rX,o=rX
        remote_src: yes
        group: tomcat
        owner: tomcat
