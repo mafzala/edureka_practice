@@ -4,13 +4,7 @@
   vars:
     download_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz
   tasks:
-   - name: Download Open JDK
-     become: yes
-     apt:
-      name: openjdk-8-jre-headless
-      update_cache: yes
-      state: present
-  
+    
    - name: validate if Java is availble 
      shell: 
       java -version
@@ -96,3 +90,9 @@
      until: "result.status == 200"
      retries: 5
      delay: 10
+
+    - name: Install maven
+      hosts: maven
+      become: true
+      roles:
+        - maven
