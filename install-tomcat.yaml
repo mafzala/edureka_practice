@@ -91,8 +91,3 @@
      retries: 5
      delay: 10
 
-   - name: Install maven
-     hosts: maven
-     become: true
-     roles:
-       - maven
