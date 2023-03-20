@@ -92,7 +92,7 @@
      delay: 10
 
    - name: Install maven
-      hosts: maven
-      become: true
-      roles:
-        - maven
+     hosts: maven
+     become: true
+     roles:
+       - maven
